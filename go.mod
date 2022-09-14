@@ -6,6 +6,7 @@ require (
 	github.com/narawichsaphimarn/goyamlenv v0.0.10
 	github.com/swaggo/gin-swagger v1.5.3
 	github.com/swaggo/swag v1.8.5
+	gorm.io/gorm v1.23.8
 )
 
 require (
@@ -41,7 +42,6 @@ require (
 	golang.org/x/net v0.0.0-20220907135653-1e95f45603a7 // indirect
 	golang.org/x/tools v0.1.12 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
-	gorm.io/gorm v1.23.8 // indirect
 )
 
 require (
