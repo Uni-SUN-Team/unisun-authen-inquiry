@@ -3,9 +3,9 @@ package services
 import (
 	"fmt"
 	"strconv"
-	"unisun/api/auth-processor-api/src/dao"
-	"unisun/api/auth-processor-api/src/models"
-	"unisun/api/auth-processor-api/src/ports/repositories"
+	"unisun/api/unisun-authen-inquiry/src/dao"
+	"unisun/api/unisun-authen-inquiry/src/models"
+	"unisun/api/unisun-authen-inquiry/src/ports/repositories"
 )
 
 type services struct {

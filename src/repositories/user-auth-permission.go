@@ -1,8 +1,8 @@
-package repositoies
+package repositories
 
 import (
-	"unisun/api/auth-processor-api/src/configs/database"
-	"unisun/api/auth-processor-api/src/entities"
+	"unisun/api/unisun-authen-inquiry/src/configs/database"
+	"unisun/api/unisun-authen-inquiry/src/entities"
 
 	"gorm.io/gorm"
 )

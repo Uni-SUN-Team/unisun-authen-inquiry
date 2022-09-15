@@ -1,6 +1,6 @@
 package repositories
 
-import "unisun/api/auth-processor-api/src/entities"
+import "unisun/api/unisun-authen-inquiry/src/entities"
 
 type RepositoriesUserAuthPermission interface {
 	FindbyUserid(userId int) entities.UserAuthPermission

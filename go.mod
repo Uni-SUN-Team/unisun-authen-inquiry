@@ -1,4 +1,4 @@
-module unisun/api/auth-processor-api
+module unisun/api/unisun-authen-inquiry
 
 go 1.19
 

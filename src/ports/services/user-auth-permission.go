@@ -1,6 +1,6 @@
 package services
 
-import "unisun/api/auth-processor-api/src/models"
+import "unisun/api/unisun-authen-inquiry/src/models"
 
 type ServiceUserAuthPermission interface {
 	FindWithUser(userId string) (*models.UserAuthPermission, error)

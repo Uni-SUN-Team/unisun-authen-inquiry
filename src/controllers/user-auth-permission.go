@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"fmt"
-	"unisun/api/auth-processor-api/src/models"
-	"unisun/api/auth-processor-api/src/ports/services"
+	"unisun/api/unisun-authen-inquiry/src/models"
+	"unisun/api/unisun-authen-inquiry/src/ports/services"
 
 	"github.com/gin-gonic/gin"
 	"github.com/narawichsaphimarn/handlercontrol/response/constants"

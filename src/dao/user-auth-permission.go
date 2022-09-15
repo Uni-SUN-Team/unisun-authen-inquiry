@@ -1,8 +1,8 @@
 package dao
 
 import (
-	"unisun/api/auth-processor-api/src/entities"
-	"unisun/api/auth-processor-api/src/models"
+	"unisun/api/unisun-authen-inquiry/src/entities"
+	"unisun/api/unisun-authen-inquiry/src/models"
 )
 
 func ConvertEntityToModel(payload *entities.UserAuthPermission) *models.UserAuthPermission {

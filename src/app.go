@@ -2,9 +2,9 @@ package src
 
 import (
 	"strings"
-	"unisun/api/auth-processor-api/docs"
-	"unisun/api/auth-processor-api/src/configs/environment"
-	"unisun/api/auth-processor-api/src/routes"
+	"unisun/api/unisun-authen-inquiry/docs"
+	"unisun/api/unisun-authen-inquiry/src/configs/environment"
+	"unisun/api/unisun-authen-inquiry/src/routes"
 
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"

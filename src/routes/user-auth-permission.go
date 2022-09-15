@@ -1,15 +1,15 @@
 package routes
 
 import (
-	"unisun/api/auth-processor-api/src/controllers"
-	repositoies "unisun/api/auth-processor-api/src/repositories"
-	"unisun/api/auth-processor-api/src/services"
+	"unisun/api/unisun-authen-inquiry/src/controllers"
+	"unisun/api/unisun-authen-inquiry/src/repositories"
+	"unisun/api/unisun-authen-inquiry/src/services"
 
 	"github.com/gin-gonic/gin"
 )
 
 func UserAuthPermission(g *gin.RouterGroup) {
-	repo := repositoies.NewUserAuthPermission()
+	repo := repositories.NewUserAuthPermission()
 	service := services.NewUserAuthPermission(repo)
 	controller := controllers.NewUserAuthPermission(service)
 	g.GET("/user-auth-permission/:id", controller.Get)

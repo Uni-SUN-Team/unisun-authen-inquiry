@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"unisun/api/auth-processor-api/src/controllers"
+	"unisun/api/unisun-authen-inquiry/src/controllers"
 
 	"github.com/gin-gonic/gin"
 )

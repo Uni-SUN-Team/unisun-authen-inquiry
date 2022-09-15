@@ -1,6 +1,6 @@
 app:
   env: "development"
-  context_path: "/authen-processor-api"
+  context_path: "/unisun-authen-inquiry"
   port: 8084
 database:
   host: "ec2-34-199-68-114.compute-1.amazonaws.com"
