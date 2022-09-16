@@ -1,4 +1,4 @@
-module unisun/api/unisun-authen-inquiry
+module unisun/api/unisun-authen-management-information
 
 go 1.19
 

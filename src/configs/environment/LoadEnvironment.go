@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os/exec"
 	"strings"
-	"unisun/api/unisun-authen-inquiry/src/configs/environment/models"
+	"unisun/api/unisun-authen-management-information/src/configs/environment/models"
 
 	"github.com/narawichsaphimarn/goyamlenv"
 )

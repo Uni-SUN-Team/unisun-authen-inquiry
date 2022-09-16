@@ -2,9 +2,12 @@ package src
 
 import (
 	"strings"
-	"unisun/api/unisun-authen-inquiry/docs"
-	"unisun/api/unisun-authen-inquiry/src/configs/environment"
-	"unisun/api/unisun-authen-inquiry/src/routes"
+	"unisun/api/unisun-authen-management-information/docs"
+	"unisun/api/unisun-authen-management-information/src/configs/environment"
+	"unisun/api/unisun-authen-management-information/src/controllers"
+	"unisun/api/unisun-authen-management-information/src/repositories"
+	"unisun/api/unisun-authen-management-information/src/routes"
+	"unisun/api/unisun-authen-management-information/src/services"
 
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
@@ -39,8 +42,22 @@ func App() *gin.Engine {
 	{
 		g.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 		g.StaticFile("/license", "./LICENSE")
-		routes.HealthCheck(g)
-		routes.UserAuthPermission(g)
+		mapRouteHealthCheck(g)
+		mapRouteUserAuthPermission(g)
 	}
 	return r
+}
+
+func mapRouteHealthCheck(g *gin.RouterGroup) {
+	controller := controllers.NewControllerHealthCheckHandler()
+	route := routes.NewRouteHealthcheck(controller)
+	route.HealthCheck(g)
+}
+
+func mapRouteUserAuthPermission(g *gin.RouterGroup) {
+	repository := repositories.NewUserAuthPermission()
+	service := services.NewUserAuthPermission(repository)
+	controller := controllers.NewUserAuthPermission(service)
+	route := routes.NewRouteUserAuthPermission(controller)
+	route.UserAuthPermission(g)
 }

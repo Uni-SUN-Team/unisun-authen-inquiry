@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"unisun/api/unisun-authen-inquiry/src"
-	"unisun/api/unisun-authen-inquiry/src/configs/environment"
-	"unisun/api/unisun-authen-inquiry/src/constants"
+	"unisun/api/unisun-authen-management-information/src"
+	"unisun/api/unisun-authen-management-information/src/configs/environment"
+	"unisun/api/unisun-authen-management-information/src/constants"
 )
 
 func main() {

@@ -1,12 +1,21 @@
 package routes
 
 import (
-	"unisun/api/unisun-authen-inquiry/src/controllers"
+	"unisun/api/unisun-authen-management-information/src/ports/controllers"
 
 	"github.com/gin-gonic/gin"
 )
 
-func HealthCheck(g *gin.RouterGroup) {
-	healController := controllers.NewControllerHealthCheckHandler()
-	g.GET("/healcheck", healController.HealthCheckHandler)
+type controllerHealthCheck struct {
+	Controller controllers.ControllerHealthCheck
+}
+
+func NewRouteHealthcheck(_controllerHealthCheck controllers.ControllerHealthCheck) *controllerHealthCheck {
+	return &controllerHealthCheck{
+		Controller: _controllerHealthCheck,
+	}
+}
+
+func (srv *controllerHealthCheck) HealthCheck(g *gin.RouterGroup) {
+	g.GET("/health-check", srv.Controller.HealthCheckHandler)
 }

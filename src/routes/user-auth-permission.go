@@ -1,18 +1,23 @@
 package routes
 
 import (
-	"unisun/api/unisun-authen-inquiry/src/controllers"
-	"unisun/api/unisun-authen-inquiry/src/repositories"
-	"unisun/api/unisun-authen-inquiry/src/services"
+	"unisun/api/unisun-authen-management-information/src/ports/controllers"
 
 	"github.com/gin-gonic/gin"
 )
 
-func UserAuthPermission(g *gin.RouterGroup) {
-	repo := repositories.NewUserAuthPermission()
-	service := services.NewUserAuthPermission(repo)
-	controller := controllers.NewUserAuthPermission(service)
-	g.GET("/user-auth-permission/:id", controller.Get)
-	g.POST("/user-auth-permission", controller.Create)
-	g.PUT("/user-auth-permission/:version", controller.Update)
+type controllerUserAuthPermission struct {
+	Controller controllers.ControllerUserAuthPermission
+}
+
+func NewRouteUserAuthPermission(_controllerUserAuthPermission controllers.ControllerUserAuthPermission) *controllerUserAuthPermission {
+	return &controllerUserAuthPermission{
+		Controller: _controllerUserAuthPermission,
+	}
+}
+
+func (srv *controllerUserAuthPermission) UserAuthPermission(g *gin.RouterGroup) {
+	g.GET("/user-auth-permission/:id", srv.Controller.Get)
+	g.POST("/user-auth-permission", srv.Controller.Create)
+	g.PUT("/user-auth-permission/:version", srv.Controller.Update)
 }

@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 	"strings"
-	"unisun/api/unisun-authen-inquiry/src/configs/environment"
-	"unisun/api/unisun-authen-inquiry/src/entities"
+	"unisun/api/unisun-authen-management-information/src/configs/environment"
+	"unisun/api/unisun-authen-management-information/src/entities"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
