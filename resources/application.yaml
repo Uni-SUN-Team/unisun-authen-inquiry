@@ -1,7 +1,7 @@
 app:
   env: "development"
-  context_path: "/unisun-authen-inquiry"
-  port: 8084
+  context_path: "/unisun-authen-management-information"
+  port: 8081
 database:
   host: "ec2-34-199-68-114.compute-1.amazonaws.com"
   name: "d833p6a5jerefa"
